@@ -29,7 +29,7 @@ public final class CommandRegistry {
         register(command: EditCommand.self)
         register(command: CacheCommand.self)
         register(command: LintCommand.self)
-        register(rawCommand: BuildCommand.self)
+        register(command: BuildCommand.self)
     }
 
     init(errorHandler: ErrorHandling,

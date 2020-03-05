@@ -27,7 +27,7 @@ extension Generating {
     }
 
     func generateWorkspace(at path: AbsolutePath,
-                           manifestLoader: ManifestLoading) throws -> (AbsolutePath, Graphing) {
+                           manifestLoader: ManifestLoading) throws -> (AbsolutePath, Graph) {
         let manifests = manifestLoader.manifests(at: path)
         if manifests.contains(.workspace) {
             return try generateWorkspace(at: path, workspaceFiles: [])

@@ -13,7 +13,7 @@ public protocol XcodeBuildControlling {
     func build(_ target: XcodeBuildTarget,
                scheme: String,
                clean: Bool,
-               arguments: XcodeBuildArgument...) -> Observable<SystemEvent<XcodeBuildOutput>>
+               arguments: [XcodeBuildArgument]) -> Observable<SystemEvent<XcodeBuildOutput>>
 
     /// Returns an observable that archives the given project using xcodebuild.
     /// - Parameters:
